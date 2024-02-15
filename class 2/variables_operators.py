@@ -96,24 +96,38 @@
 #     print(s)
 
 # Dictionary
-demographic_info = {"First Name": "Jean",
-                    "Last Name": "Juste",
-                    "State": "New York"}
+# demographic_info = {"First Name": "Jean",
+#                     "Last Name": "Juste",
+#                     "State": "New York"}
 
-print(demographic_info)
-print(type(demographic_info))
-
+# print(demographic_info)
+# print(type(demographic_info))
 
 # Cast a string to an integer
-
-
+# my_string = "5"
+# print(type(my_string))
+# new_number = int(my_string) # casting our string to an integer
+# print(new_number)
+# print(type(new_number))
 
 # Cast integer to string
+# second_num = 10
+# print(type(second_num))
+# new_string = str(second_num) # casting our integer to an string
+# print(new_string)
+# print(type(new_string))
 
+#  Colors
+# fav_colors = ["blue", "green", "red", "brown", "black", "purple"] # List item has 4 elements
+# num_colors = len(fav_colors)
+# print(num_colors)
 
-# Student grade dataset
+color = "orange"
+# my_count = len(color)
+# print(my_count)
 
-
+for c in color:
+    print(c)
 # finding amount of assignments
 
 
