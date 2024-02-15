@@ -36,21 +36,25 @@
 #     print("You cannot divide by zero, have a great day!")
 
 # Exponents
+
 # print(5 ** 5)
 # print(2 ** 5)
 # print(3 ** 6)
 
 # Integer Division
+
 # print(5 // 2)
 # print(10 // 4)
 # print(6 // 2)
 
 # Modulo/Mod/Remainder
+
 # print(5 % 2)
 # print(10 % 4)
 # print(6 % 2)
 
 # Program to find the perimeter of a rectangle
+
 # Formula of a Perimeter = (L + w) * 2
 # length = 10
 # width = 7
@@ -65,21 +69,25 @@
 # print(type(num_one))
 
 # String
+
 # fav_color = "blue"
 # print(fav_color)
 # print(type(fav_color))
 
 # Bool
+
 # technical_errors = True
 # print(technical_errors)
 # print(type(technical_errors))
 
 # Float
+
 # num_two = 1.22
 # print(num_two)
 # print(type(num_two))
 
 # String
+
 # first_name = "Jean"
 # last_name = "Juste"
 # fullname = first_name + " " + last_name
@@ -87,23 +95,26 @@
 # print(first_name, last_name)
 
 # List 
+
 # student_grades = [100, 95, 70, 85, 40]
 # print(student_grades)
 # print(type(student_grades))
 
 # For loop
+
 # for s in student_grades:
 #     print(s)
 
 # Dictionary
+
 # demographic_info = {"First Name": "Jean",
 #                     "Last Name": "Juste",
 #                     "State": "New York"}
-
 # print(demographic_info)
 # print(type(demographic_info))
 
 # Cast a string to an integer
+
 # my_string = "5"
 # print(type(my_string))
 # new_number = int(my_string) # casting our string to an integer
@@ -111,6 +122,7 @@
 # print(type(new_number))
 
 # Cast integer to string
+
 # second_num = 10
 # print(type(second_num))
 # new_string = str(second_num) # casting our integer to an string
@@ -118,30 +130,31 @@
 # print(type(new_string))
 
 #  Colors
+
 # fav_colors = ["blue", "green", "red", "brown", "black", "purple"] # List item has 4 elements
 # num_colors = len(fav_colors)
 # print(num_colors)
 
-color = "orange"
+# color = "orange"
+
 # my_count = len(color)
 # print(my_count)
 
-for c in color:
-    print(c)
-# finding amount of assignments
-
-
-# Perimeter of a rectangle
-
-
-# Determine perimeter and display output
+# for c in color:
+#     print(c)
 
 
 # Fahrenheit to Celsius
 
+# Formula fahrenheit to Celsius is C = (F - 32) * 5/9
+
+# fahrenheit = 89
+# celsius = (fahrenheit - 32) * 5/9
+# print(celsius)
 
 # Eval
-
+cold_weather = "True"
+print(eval(cold_weather))
 
 '''
 # You are given a triangle with a side #1 of 4, base of 6, and side #2 of 3. Create
