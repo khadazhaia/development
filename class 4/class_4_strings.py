@@ -287,8 +287,10 @@ username_cleaned = username.strip()
 ex_21 = '  sportsfan876  ' # sanitize this string
 
 
-user_input = input("What is your name? ")
-print(user_input)
+# user_input = int(input("What is your favorite number? ")) # casting the string to an integer
+
+# print(user_input) 
+# print(type(user_input))
 
 '''
 Write some code that will take a string from the user and print if it is a number or not.
@@ -301,13 +303,15 @@ False
 True
 '''
 
-# Get input from user
+# Get input from user4
+# user_input = (input("Good afternoon, please enter your input "))
 
 # Test input
 
+
 # Provide output
-
-
+# print("Is your input a number or not?", result)
+# print(f"Is {user_input} a number or not?", result)
 
 '''
 Take a word from the user. Then take a number from the user. Then print whether the word is longer than the number.
@@ -323,13 +327,19 @@ True
 '''
 
 # Get user input
+user_word_input = input("Please enter your word: ")
+user_number_input =int(input("Please enter your number: "))
 
 # Convert where needed
 
+length_of_word = len(user_word_input) #length of our word input
+
 # Comparison
 
-# Output
+result = length_of_word > user_number_input
 
+# Output
+print(f"Is the word {user_word_input} longer than the number {user_number_input}?", result)
 
 '''
 Exercise 
