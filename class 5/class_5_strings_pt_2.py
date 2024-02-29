@@ -164,11 +164,9 @@ Test your code on a few inputs to make sure it works!
 # Get input 
 
 email = input("Hello, please enter your email address: ")
-# print(email)
 
 # Sanitize Data
 email = email.strip()
-# print(email)
 
 # Test 1: It has a "." at the third-to-last index
 test_1 = (email[-4] == ".")
@@ -179,10 +177,16 @@ test_2 = (email[-5] >= "@")
 print(f"Test 2: Does the email have exactly one '@' symbol, at the fifth-to-last index or earlier? {test_2}")
 
 # Test 3: There is at least one character before the "@" symbol
+test_3 = (email[0] >= "@")
+print(f"Test 3: Does the email have atleast one character before the '@' symbol? {test_3}")
 
 # Test 4: It doesn’t have any spaces (doesn’t contain " ")
+test_4 = (email != email.isspace())
+print(f"Test 4: Does the email not have any spaces? {test_4}")
 
 #Final Test with and Keyword
+final_test = test_1 and test_2 and test_3 and test_4
+print(f"Final Test: Are all the above tests True? {final_test}")
 
 
 # End Parameter
