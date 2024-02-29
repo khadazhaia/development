@@ -75,33 +75,49 @@ fav_animal = 'Ostrich'
 # Using bracket notation and reverse indexing, access the letter g, the letter i, the letter p
 fav_season = 'spring'
 
+letter_g = fav_season[-1]
+# print(letter_g)
+
+letter_i = fav_season[-3]
+# print(letter_i)
+
+letter_p = fav_season[-5]
+# print(letter_p)
 
 ''' Slicing '''
 # There are 3 parameters available with indexing with bracket notation [start:stop:step]
 fav_food = 'spaghetti'
-
+slice_of_fav_food = fav_food[2:6] # [start:stop] exclude the character at stop
+# print(slice_of_fav_food)
 
 # Using slicing please create a string that accesses 'rica' in 'America'
 
 country = 'America'
-
+slice_of_country = country[3:7]
+# print(slice_of_country)
 
 # Using slicing please create a string that accesses 'ora' in 'Dora the explorer'
 cartoon = 'Dora the explorer'
-
+slice_of_cartoon = cartoon[1:4]
+# print(slice_of_cartoon)
 
 # Using slicing please create a string that accesses 'explo' in 'Dora the explorer'
-
+cartoon = "Dora the explorer"
+slice_of_cartoon = cartoon[9:14]
+# print(slice_of_cartoon)
 
 # Using slicing please create a string that accesses 'albo' in 'Rocky Balboa'
 boxer = 'Rocky Balboa'
+slice_of_boxer = boxer[7:11]
+# print(slice_of_boxer)
 
 # Let's step through this string 2 characters at a time
 superheroine = 'Wonder Woman'
+print(superheroine[2:len(superheroine):2])
 
 # Lets step through this entire word and skip by 4
 word = 'Supercalifragilisticexpialidocious'
-
+print(word[0:len(word):4])
 
 '''Slicing in reverse '''
 
