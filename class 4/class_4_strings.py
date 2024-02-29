@@ -327,19 +327,19 @@ True
 '''
 
 # Get user input
-user_word_input = input("Please enter your word: ")
-user_number_input =int(input("Please enter your number: "))
+# user_word_input = input("Please enter your word: ")
+# user_number_input =int(input("Please enter your number: "))
 
 # Convert where needed
 
-length_of_word = len(user_word_input) #length of our word input
+# length_of_word = len(user_word_input) #length of our word input
 
 # Comparison
 
-result = length_of_word > user_number_input
+# result = length_of_word > user_number_input
 
 # Output
-print(f"Is the word {user_word_input} longer than the number {user_number_input}?", result)
+# print(f"Is the word {user_word_input} longer than the number {user_number_input}?", result)
 
 '''
 Exercise 
