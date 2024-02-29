@@ -45,10 +45,6 @@ month = 'February'
 last_letter = month[len(month)-1]
 # print(last_letter)
 
-
-
-
-
 # Using bracket notation access the letter x, the letter e, and the letter d 
 first_name = 'Alexandra'
 letter_x = first_name[3]
@@ -113,18 +109,18 @@ slice_of_boxer = boxer[7:11]
 
 # Let's step through this string 2 characters at a time
 superheroine = 'Wonder Woman'
-print(superheroine[2:len(superheroine):2])
+# print(superheroine[2:len(superheroine):2])
 
 # Lets step through this entire word and skip by 4
 word = 'Supercalifragilisticexpialidocious'
-print(word[0:len(word):4])
+# print(word[0:len(word):4])
 
 '''Slicing in reverse '''
 
-animal = 'daycare' # Excludes the start character
-# print(animal[::-1]) # Full daycare in reverse
-# print(animal[5:0:-1]) # aycar
-# print(animal[6:0:-1]) # eracya
+random_word = 'daycare' # Excludes the start character
+# print(random_word[::-1]) # Full daycare in reverse
+# print(random_word[5:0:-1]) # aycar
+# print(random_word[6:0:-1]) # eracya
 
 
 '''
@@ -136,7 +132,20 @@ python
 hon
 
 '''
+# Create a variable for word
+language = "python"
 
+# Create a varibale to get half of the length of the word
+half = int(len(language) / 2)
+# print(type(half))
+
+# Create final bracket notation
+result = language[half:len(language)]
+# print(result)
+
+#shorten version of the code above
+language = "python"
+# print(language[int(len(language) / 2):len(language)])
 
 '''
 Exercise - Valid email
@@ -154,7 +163,11 @@ Test your code on a few inputs to make sure it works!
 
 # Get input 
 
-# Clean input
+email = input("Hello, please enter your email address")
+
+# Sanitize Data
+email = email.strip
+print(email)
 
 # Test 1: It has a "." at the third-to-last index
 
