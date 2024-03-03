@@ -24,7 +24,7 @@ test_1 = (email[-4] == ".")
 print(f"Test 1: Does the email have '.' at the third-to-last index? {test_1}\n")
 
 # Test 2: It has exactly one "@" symbol, at the fifth-to-last index or earlier
-test_2 = ((email[-6] >= "@") and (len("@") == 1))
+test_2 = (email.count("@") == 1) and (email[-5] > "@")
 print(f"Test 2: Does the email have exactly one '@' symbol, at the fifth-to-last index or earlier? {test_2}\n")
 
 # Test 3: There is at least one character before the "@" symbol
@@ -32,7 +32,6 @@ test_3 = (email[0] > "@")
 print(f"Test 3: Does the email have atleast one character before the '@' symbol? {test_3}\n")
 
 # Test 4: It doesn’t have any spaces (doesn’t contain " ")
-# test_4 = (email[0:] != " ")
 test_4 = (" " not in email[0:])
 print(f"Test 4: Does the email not have any spaces? {test_4}\n")
 
