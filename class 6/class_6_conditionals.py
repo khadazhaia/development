@@ -190,20 +190,20 @@ This is something else
 
 '''
 
-user_input = input("Please enter your data: ")
+# user_input = input("Please enter your data: ")
 
-if user_input.isnumeric():
-   print(f"{user_input} is a number.")
-elif user_input.isalpha():
-   print(f"{user_input} is a word.")
-else:
-   print(f"{user_input} is something else.")
+# if user_input.isnumeric():
+#    print(f"{user_input} is a number.")
+# elif user_input.isalpha():
+#    print(f"{user_input} is a word.")
+# else:
+#    print(f"{user_input} is something else.")
 
 '''Chaining Conditionals code results'''
 
 # Mutually exclusive
     
-# temp_f = 35
+# temp_f = 39
 # if temp_f > 70:
 #     print("It is hot outside")
 # elif temp_f > 40:
@@ -233,7 +233,7 @@ else:
 
 
 # nested conditionals
-num = 5
+# num = 5
 
 # if num % 2 == 1:
 #     if num < 10:
@@ -259,13 +259,26 @@ If they match, print “Login successful.” If they don't, print “Incorrect u
 
 # Prompt the user to enter their username and password using the input() function.
 
+input_username = input("Please enter your username: ")
+
+input_username.strip()
+
+input_password = input("Please enter your password: ")
+
+input_password.strip()
 
 # Create two variables called username and password and set them to any valid string values.
 
+username = "admin"
+
+password = "blue"
 
 # Create your conditional
 
-
+if input_username == username and input_password == password:
+    print("Login successful.")
+else:
+    print("Incorrect username or password.")
 
 
 
