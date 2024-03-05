@@ -6,8 +6,8 @@
 x = 20 
 y = 15
 
-if x > y:
-    print(x)
+# if x > y:
+#     print(x)
 
 # This will not run
 
@@ -36,7 +36,7 @@ result = val % 2
 
 
 '''Exercise Solution'''
-user_input = int(input("please enter your number: "))
+# user_input = int(input("please enter a number: "))
 
 # if user_input % 2 != 0:
 #    print("This is odd.")
@@ -54,9 +54,45 @@ D - Between 65 and 69
 F - Anything under 65
 '''
 
+# Get grade from user
+score = int(input("Please enter your grade: "))
 
+# Create our conditional
+# Option 1
+# if score >= 90 and score <= 100:
+#     print("Grade A")
+# elif score >= 80 and score < 90:
+#     print("Grade B")
+# elif score >= 70 and score < 80: 
+#     print("Grade C")  
+# elif score >= 65 and score < 70:
+#     print("Grade D")
+# else:
+#     print("Grade F")
 
+# Option 2
+# if 90 <= score <= 100:
+#     print("Grade A")
+# elif 80 <= score < 90:
+#     print("Grade B")
+# elif 70 <= score < 80: 
+#     print("Grade C")  
+# elif 65 <= score < 70:
+#     print("Grade D")
+# else:
+#     print("Grade F")
 
+# Option 3 (I like this option better)
+if score >= 90:
+    print("Grade A")
+elif score >= 80:
+    print("Grade B")
+elif score >= 70: 
+    print("Grade C")  
+elif score >= 65:
+    print("Grade D")
+else:
+    print("Grade F")
 
 '''
 Exercise
