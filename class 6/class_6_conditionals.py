@@ -55,7 +55,7 @@ F - Anything under 65
 '''
 
 # Get grade from user
-score = int(input("Please enter your grade: "))
+# score = int(input("Please enter your grade: "))
 
 # Create our conditional
 # Option 1
@@ -83,16 +83,16 @@ score = int(input("Please enter your grade: "))
 #     print("Grade F")
 
 # Option 3 (I like this option better)
-if score >= 90:
-    print("Grade A")
-elif score >= 80:
-    print("Grade B")
-elif score >= 70: 
-    print("Grade C")  
-elif score >= 65:
-    print("Grade D")
-else:
-    print("Grade F")
+# if score >= 90:
+#     print("Grade A")
+# elif score >= 80:
+#     print("Grade B")
+# elif score >= 70: 
+#     print("Grade C")  
+# elif score >= 65:
+#     print("Grade D")
+# else:
+#     print("Grade F")
 
 '''
 Exercise
@@ -107,6 +107,21 @@ User input: 12
 This is even
 
 '''
+
+# user_input = int(input("Please enter a number: "))
+
+# With an elif statement
+# if user_input % 2 != 0:
+#    print("This is odd.")
+# elif user_input % 2 == 0:
+#    print("This is even.")
+
+# with an else statement
+# if user_input % 2 != 0:
+#    print("This is odd.")
+# else:
+#    print("This is even.")
+
 
 ''' Exercise solution with an elif and else'''
 
