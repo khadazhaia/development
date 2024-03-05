@@ -108,6 +108,7 @@ This is even
 
 '''
 
+''' Exercise solution with an elif and else'''
 # user_input = int(input("Please enter a number: "))
 
 # With an elif statement
@@ -121,13 +122,6 @@ This is even
 #    print("This is odd.")
 # else:
 #    print("This is even.")
-
-
-''' Exercise solution with an elif and else'''
-
-
-
-
 
 
 '''
@@ -150,6 +144,28 @@ Unknown
 
 ''' Exercise solution(s)'''
 
+# Check for a decimal
+
+# user_input = input("Please enter a number: ")
+
+# if not user_input.isdecimal():
+#    print(f"{user_input} is not odd or even")
+# elif int(user_input) % 2 != 0:
+#    print(f"{user_input} is odd")
+# else:
+#    print(f"{user_input} is even.")
+
+# Try and Except method  
+   
+# try:
+#    user_input = int(input("Please enter a number: "))
+# except:
+#    print("Unknown")
+# else:
+#    if user_input % 2 != 0:
+#         print("This is odd.")
+#    else:
+#         print("This is even.")
 
 
 
@@ -174,8 +190,14 @@ This is something else
 
 '''
 
+user_input = input("Please enter your data: ")
 
-
+if user_input.isnumeric():
+   print(f"{user_input} is a number.")
+elif user_input.isalpha():
+   print(f"{user_input} is a word.")
+else:
+   print(f"{user_input} is something else.")
 
 '''Chaining Conditionals code results'''
 
