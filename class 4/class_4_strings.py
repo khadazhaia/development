@@ -411,9 +411,9 @@ bottom_border = len(user_input) * "*"
 
 # create output, dont forget to append asterisk to front and back of the string
 
-print("*".join(top_border))
-print("*". join(user_input))
-print("*".join(bottom_border))
+print(" ", top_border, " ", sep="*")
+print(" ", user_input, " ", sep="*")
+print(" ",bottom_border, " ", sep="*")
 
 
 
