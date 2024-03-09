@@ -15,11 +15,11 @@ If they match, print “Login successful.” If they don't, print “Incorrect u
 
 input_username = input("Please enter your username: ")
 
-input_username.strip()
+input_username = input_username.strip()
 
 input_password = input("Please enter your password: ")
 
-input_password.strip()
+input_password = input_password.strip()
 
 # Create two variables called username and password and set them to any valid string values.
 

@@ -198,7 +198,7 @@ test_10 = 'affordable'
 
 
 ex_12 = 'Username' # check if all lowercase
-
+# print(ex_12.islower())
 
 # isupper() lets check for ALL uppercase
 
@@ -209,7 +209,7 @@ test_12 = 'HALLOWEEN'
 
 
 ex_13 = 'TEMPLE' # check if uppercase
-
+# print(ex_13.isupper())
 
 # isspace() Lets check for whitespace (someone enters nothing for an input)
 
@@ -220,7 +220,7 @@ test_14 = 'j      b    c'
 
 
 ex_14 = '   ' # check if whitespace
-
+# print(ex_14.isspace())
 
 # istitle() Let's check for title case
 
@@ -231,7 +231,7 @@ test_16 = 'Eye Of The Tiger'
 
 
 ex_15 = 'Tempus Fugit' # check for title casing
-
+# print(ex_15.istitle())
 
 # join() Joins the elements of an iterable to the end of the string
 
@@ -241,41 +241,47 @@ new_string = "-".join(my_colors)
 
 
 ex_16 = ['summer', 'spring', 'fall', 'winter'] # create a string from this list and separate it with an asterisk
-
+new_string = "*".join(ex_16)
+# print(new_string)
 
 # lower() Converts a string into lower case
 day = 'MONDAY'
 new_day = day.lower()
 # print(new_day)
 
-
 # partition() Returns a tuple where the string is partitioned into three parts
 test_17 = 'I am excited about spring time.'
+new_test_17 = test_17.partition("about")
+# print(new_test_17)
 
 ex_17 = 'We will be going to the park next week.' # partition this string on the word 'going'
+# print(ex_17.partition("going"))
 
 # replace() Returns a string where a specified value is replaced with a specified value
 food = 'My favorite food is pizza.'
-
+# print(food.replace("pizza","steak"))
 
 ex_18 = 'Today is Tuesday. Tuesday we play golf.' # replace instances of Tuesday with Thursday
-
+# print(ex_18.replace("Tuesday", "Thursday"))
 
 # split() Splits the string at the specified separator, and returns a list
 test_18 = 'I will be broken up on every space'
-
+# print(test_18.split())
 
 ex_19 = 'Split*me*up*on*the*asterisk' # split this spring up on every asterisk
+# print(ex_19.split("*"))
 
 # splitlines() Splits the string at line breaks and returns a list
 lyrics = "Every time that I look in the mirror\nAll these lines on my face getting clearer\nThe past is gone\nOh, it went by like dusk to dawn\nIsn't that the way?"
-
+# print(lyrics.splitlines())
 
 # startswith() Returns true if the string starts with the specified value
 
 name = 'giraffe'
+# print(name.startswith("g"))
 
 ex_20 = 'summer' # Check if this string starts with an 's'
+# print(ex_20.startswith("s"))
 
 # strip() Returns a trimmed version of the string
 username = '   jessica123    '
@@ -285,7 +291,8 @@ username_cleaned = username.strip()
 
 
 ex_21 = '  sportsfan876  ' # sanitize this string
-
+ex_21 = ex_21.strip()
+# print(ex_21)
 
 # user_input = int(input("What is your favorite number? ")) # casting the string to an integer
 
@@ -353,7 +360,18 @@ User input: Computer
 3
 
 '''
+# user_input = input("Please enter a word: ")
+# user_input = user_input.strip()
+# user_input = user_input.lower()
 
+# count_vowel_a = user_input.count("a")
+# count_vowel_e = user_input.count("e")
+# count_vowel_i = user_input.count("i")
+# count_vowel_o = user_input.count("o")
+# count_vowel_u = user_input.count("u")
+
+# final_count = count_vowel_a + count_vowel_e + count_vowel_i + count_vowel_o + count_vowel_u
+# print(f"How many vowels are in the string?", final_count)
 
 
 '''
@@ -364,6 +382,9 @@ Now, print using string concatenation. Remember to cast hours to a string and ma
 
 '''
 
+hours = 24
+# print("There are", hours, "hours in a day")
+# print("There are " + str(hours) + " hours in a day")
 
 '''
 Write some code that will print a box around a string.
@@ -381,13 +402,18 @@ User input: programming is fun
 '''
 
 # get input
-
+user_input = input("Please enter a word: ")
+user_input = user_input.strip()
 
 # get length for top and bottom border
+top_border = len(user_input) * "*"
+bottom_border = len(user_input) * "*"
 
 # create output, dont forget to append asterisk to front and back of the string
 
-
+print("*".join(top_border))
+print("*". join(user_input))
+print("*".join(bottom_border))
 
 
 
