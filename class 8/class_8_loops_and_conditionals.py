@@ -35,17 +35,48 @@ userin = " " # initialization of variable
 #     print(userin)
 
 
-userin = " " # initialization of variable
-while True:
-    userin = input("Enter something or hit stop to leave the loop: ")
-    if userin == "stop":
-        break
-    print(userin)
+# userin = " " # initialization of variable
+# while True:
+#     userin = input("Enter something or hit stop to leave the loop: ")
+#     if userin == "stop":
+#         break
+#     print(userin)
 
 
 ''' Break in nested loops '''
 
+# i = 3
+# while i > 0:
+#     print(i)
+#     i -= 1
+#     if i == 4:
+#         break
+# else:
+#     print("done")
 
+
+userin = " "
+# Taking a string from the user until they hit stop
+# while userin != "stop":
+#     userin = input("Please enter a word or hit stop to end the loop ")
+    
+#     for l in userin: # looping through the input from the user
+#         if l.isalpha(): # we are testing to see if each character is in the alphabet
+#             print(l)
+#         else:
+#             break
+#     print("This is our next line")
+
+
+# while True:
+#     userinput = input("Please enter your word: ")
+#     print("we are on line 73")
+#     print(userinput)
+#     print("we are still in the while loop")
+#     break
+#     print("I will not print, because we used the break keyword above me")
+
+# print("Why am I printed??") # this is outside of the loop
 
 '''
 Exercise
@@ -66,22 +97,56 @@ c
 Error: Not a number
 
 '''
+    
 '''Declare any needed variables'''
 
+# userinput, sum = " ", 0
 
+# ''' Start our loop '''
+# while True:
+#    ''' Get user input'''
+#    userinput = input("Please enter your number: ")
 
-
+#    ''' Test for letter '''
+#    if userinput.isalpha():
+#       print("Error: Not a number")
+#       break
+#    ''' covert to integer, end and print sum if zero, otherwise continue to add to sum '''
+#    userinput = int(userinput) # recast to integer
+#    if userinput != 0:
+#       sum += userinput
+#    else:
+#       print(f"Sum: {sum}")
+#       break
+      
+   
 ''' Continue keyword '''
 
 ''' Example
 Use the continue keyword to loop through a string and only print the vowels.
 '''
-# Option 1
+# Option 1 # This method can be used to look for taken usernames
+# test_string = "hello"
+# # vowels = "aeiou"
+# vowels = ["a", "e", "i", "o", "u"]
 
+# for t in test_string:
+#    if t in vowels:
+#       print(t)
+#    else:
+#       continue
+  
 
 # Option 2
 
+# test_string = "hello"
 
+# for t in test_string:
+#    if t in "aeiou":
+#       print(t)
+#    else:
+#       continue
+  
 
 ''' 
 Exercise:
@@ -93,14 +158,74 @@ Print the sum of all the even digits at the end.
 Make sure to use the continue keyword.
 '''
 
+'''Declare any needed variables'''
 
+# my way
+userinput, sum = " ", 0
+
+''' Start our loop '''
+# while True:
+#    ''' Get user input'''
+#    userinput = input("Please enter your number: ")
+
+#    ''' Test for number '''
+#    if userinput.isalpha():
+#        break
+    
+#    ''' covert to integer,  add to sum if its even, print sum of all even digits'''
+#    userinput = int(userinput) # recast to integer
+#    if userinput % 2 == 0:
+#       sum += userinput
+#       continue
+#    else:
+#       print(f"Sum: {sum}")
+#       break
+   
+# class way
+   
+user_input, sum = " ", 0
+
+# while True:
+#    user_input = input("Please enter your string: ")
+#    for u in user_input: # loop through the string entered by the user
+#       if u.isalpha():
+#          continue # continue will allow us to skip the letters
+#       else:
+#          u = int(u) # recasting to a number
+#          if (u % 2) == 0:
+#             sum += u
+#    print(sum)
+   
 
 
 ''' Break, Continue, and Pass '''
 
+# word = "hello"
+# vowels = "aeiou"
+
+# for l in word:
+#     if l in vowels:
+#         print(l)
+#         break
 
 
+# word = "hello"
+# vowels = "aeiou"
 
+# for l in word:
+#     if l in vowels:
+#         continue
+#     print(l)
+        
+
+# word = "hello"
+# vowels = "aeiou"
+
+# for l in word:
+#     if l in vowels:
+#         pass
+#     print(l)
+        
 '''
 Exercise
 
@@ -125,4 +250,13 @@ REQUIREMENTS
 
 '''These variables will be placeholders for the total and new string we will be creating'''
 
+new_total = 0
+new_string = " "
 
+while True:
+    user_input = input("Please enter your data: ")
+
+    # if empty stop thw lopp
+    if len(user_input) == 0:
+        print("String is empty, stopping the loop")
+        break
