@@ -71,32 +71,36 @@ sys_id = "admin"
 sys_password = "password"
 
 # Prompt User
-user_id = input("Please enter your username: ")
-user_password = input("Please enter your password: ")
+# user_id = input("Please enter your username: ")
+# user_password = input("Please enter your password: ")
 
-# Our initial check, while not equal we will enter loop
-while sys_id != user_id and sys_password != user_password:
-    # we have entered the loop, this means the username/password did not match.
-    print("Incorrect username or password")
-    user_id = input("Please enter your username: ")
-    user_password = input("Please enter your password: ")
+# # Our initial check, while not equal we will enter loop
+# while sys_id != user_id and sys_password != user_password:
+#     # we have entered the loop, this means the username/password did not match.
+#     print("Incorrect username or password")
+#     user_id = input("Please enter your username: ")
+#     user_password = input("Please enter your password: ")
 
-print("Login Successful") # Outside of the while loop
+# print("Login Successful") # Outside of the while loop
 
 
 ''' For Loops '''
 
 # STRING
 my_string = 'Supercalifragilisticexpialidocious'
-
+# for letters in my_string:
+#     print(letters)
 
 # LIST
 my_list = ['dog', 'cat', 'bird', 'giraffe', 'fox', 'elephant', 'mouse', 'zebra']
-
+# for animal in my_list:
+#     print(animal)
 
 # TUPLE
 my_tuple = ('january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december')
 
+# for months in my_tuple:
+#     print(months)
 
 
 # DICTIONARY
@@ -105,23 +109,41 @@ my_dictionary = {"First name": "Jill",
                  "Age": 34,
                  "Address":"1515 Mockingbird Lane"}
 
+# for keys
+# for k in my_dictionary.keys():
+#     print(k)
 
+# # for values
+# for v in my_dictionary.values():
+#     print(v)
 
+# for both
+    
+# for k, v in my_dictionary.items():
+#     print(k, v)
 
 # SET
 my_set = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
-
-
+# for days in my_set:
+#     print(days)
 
 # RANGE
-
-
+# for x in range(10, 25):
+#     print(x)
+    
 
 '''
 Write a for loop that loops through a string, counts all the letters, and then print how long the string is.
 '''
+# userin = input("Please enter a word: ")
+# userin = userin.strip()
 
+# count = 0 #maintain the count in the letters of our string
 
+# for word in userin:
+#     count += 1 #incrimenting count for string
+
+# print(f"There are {count} letters in the word {userin}.")
 
 ''' Exercise
 
@@ -134,7 +156,26 @@ Example:
 
 Hint: remember to cast to int() for each digit in the loop
 '''
+# my way
+# userin = input("Please enter a number: ")
+# userin = userin.strip()
+# total = 0
 
+# for number in userin:
+#     userin == userin.isnumeric()
+#     total += int(number)
+    
+# print(f"Your total is {total}")
+
+# class way
+sum = 0 # initialize our variable
+user_input = input("Please enter your number: ")
+
+for t in user_input:
+    if user_input.isdecimal(): # once we confirm it is a number
+        t = int(t) # this has to be cast to an integer to be added to sum
+        sum += t # every time through, we will add that value to sum
+print(f"Your total is {sum}")
 
 
 
