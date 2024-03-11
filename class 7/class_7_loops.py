@@ -45,6 +45,13 @@ Lets look at code that will run infinitely until the user tells it to "stop"
 #     userin = input("Please enter a word, or 'stop' to end the loop: ")
 #     print(userin)
      
+# Assign multiple variables on one line.
+# username, password, day_of_week = "hello", "how", "are you"
+
+# print(username)
+# print(password)
+# print(day_of_week)
+
 '''
 Exercise
 
@@ -60,12 +67,21 @@ If they match, print “Login successful” and end the program.
 
 # Set sys id and pass
 
+sys_id = "admin"
+sys_password = "password"
 
 # Prompt User
-
+user_id = input("Please enter your username: ")
+user_password = input("Please enter your password: ")
 
 # Our initial check, while not equal we will enter loop
+while sys_id != user_id and sys_password != user_password:
+    # we have entered the loop, this means the username/password did not match.
+    print("Incorrect username or password")
+    user_id = input("Please enter your username: ")
+    user_password = input("Please enter your password: ")
 
+print("Login Successful") # Outside of the while loop
 
 
 ''' For Loops '''
