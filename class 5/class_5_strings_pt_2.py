@@ -197,7 +197,7 @@ Test your code on a few inputs to make sure it works!
 
 
 # Sep Parameter
-print("Today I woke up at ", 8, " am", sep='*')
+# print("Today I woke up at ", 8, " am", sep='*')
 
 '''
 Get input from the user and store it in a variable called userin.
@@ -209,10 +209,13 @@ print("You entered",userin)
 How can you add sep and end keywords to get the exact formatting shown above?
 '''
 # userin = input("Please enter your input: ")
+# print("You entered", userin, sep=": ", end=".")
 
-# Formatted strings
+# round a float
 
 long_num = 12.34567890
+long_num = round(long_num, 2)
+# print(long_num)
 
 '''
 You need to write a script that will generate an email to a customer who has just made a purchase. You have 3 variables:
@@ -230,8 +233,13 @@ The ABC Company
 name = 'Josiah Wilson'
 product = 'ABC Sneakers'
 price = 74.95343452342
+price = round(price, 2)
 
-
+# print(f"""Dear {name},
+# Thank you for your purchase of a {product}. Your credit card has been charged ${price}.
+# We appreciate your business and look forward to serving you again.
+# Sincerely,
+# The ABC Company""")
 
 '''
 Write some code that takes a string and tells if it is a palindrome (same forwards and backwards).
@@ -241,3 +249,9 @@ Examples:
 racecar: True
 cat: False
 '''
+
+user_input = input("Please enter a word: ")
+
+word = user_input[0:] == user_input[::-1]
+
+print(f"Is the word a palindrome (same forwards and backwords)? {user_input}: {word}")
