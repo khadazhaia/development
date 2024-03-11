@@ -168,14 +168,14 @@ Hint: remember to cast to int() for each digit in the loop
 # print(f"Your total is {total}")
 
 # class way
-sum = 0 # initialize our variable
-user_input = input("Please enter your number: ")
+# sum = 0 # initialize our variable
+# user_input = input("Please enter your number: ")
 
-for t in user_input:
-    if user_input.isdecimal(): # once we confirm it is a number
-        t = int(t) # this has to be cast to an integer to be added to sum
-        sum += t # every time through, we will add that value to sum
-print(f"Your total is {sum}")
+# for t in user_input:
+#     if user_input.isdecimal(): # once we confirm it is a number
+#         t = int(t) # this has to be cast to an integer to be added to sum
+#         sum += t # every time through, we will add that value to sum
+# print(f"Your total is {sum}")
 
 
 
@@ -192,9 +192,38 @@ o is a vowel
 
 
 '''
+# my way
+# user_input = input("Please enter a word: ")
+# user_input = user_input.strip()
+# vowel = ["a", "e", "i", "o", "u"]
 
+# for letter in user_input:
+#     if letter in vowel:
+#         print(f"{letter} is a vowel")
+#     else:
+#         print(f"{letter} is a consonant")
 
+# class way
+        
+# word = input("Please enter your word: ")
+# vowels = ["a", "e", "i", "o", "u"]
+# word = word.lower()
 
+# for w in word:
+#     if w in vowels:
+#         print(f"{w} is a vowel")
+#     else:
+#         print(f"{w} is a consonant")
+
+# shorten version
+        
+# word = "hello"
+
+# for w in word:
+#     if w in "aeiou":
+#         print(f"{w} is a vowel")
+#     else:
+#         print(f"{w} is a consonant")
 
 ''' Exercise 
 You're working on a data analysis project for a company that looks at written text. You're only interested in letters from A-Z because you're analyzing language. However, the data you're given has some values that shouldn't be there.
@@ -202,12 +231,33 @@ Write a Python program that takes a string as input from the user, removes anyth
 You can loop through the string in a for loop, use the .isalpha() string method, and remember that strings are immutable, so you will have to build a new string from scratch using string concatenation.
 '''
 
+# for loop with conditional
+
+# my way
+# Take input from the user
+# user_input = input("Please enter your data: ")
+# user_input = user_input.strip()
+
+# # Removes anything from the string that isn't a letter
+# new_string = " "
+
+# for letter in user_input:
+#     if letter.isalpha() != user_input.isalpha():
+#         new_string += letter
+
+# # Prints new string
+# new_string = new_string.strip()
+# print(f"(Your new data is {new_string}")
 
 
+# class way
+result = "" #this will capture our alphabet
+user_input = input("Please enter your data: ")
 
-
-
-
-
-
-
+for u in user_input:
+    if u.isalpha(): #if the letter in the string is in the alphabet
+        result += u
+    # else:
+    #    print(f"Sorry {u} is not a letter")
+    
+print(result)
