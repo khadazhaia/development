@@ -7,21 +7,40 @@ How do I write a While Loop?
 
 '''
 # For Loop
-colors = ['green', 'blue', 'orange', 'yellow']
+colors = ['green', 'blue', 'orange', 'yellow'] # You can solve the taken username
 
-
+# for c in colors:
+#     print(c)
 
 # While Loop
 
+""" initialization of variables """
+limit = 26  
+start = 0
 
-
+# while start < limit: # condition
+#     print(start)   # feedback for the user
+#     start += 1
 
 ''' Break Keyword '''
 
 # Lets look at the 2 examples below and take note where the loop stops
 
+south, north, west, east = " ", " ", " ", " " # initialzing multiple variables on one line
+
+userin = " " # initialization of variable
+
+# while userin != "stop":
+#     userin = input("Enter something or hit stop to leave the loop: ")
+#     print(userin)
 
 
+userin = " " # initialization of variable
+while True:
+    userin = input("Enter something or hit stop to leave the loop: ")
+    if userin == "stop":
+        break
+    print(userin)
 
 
 ''' Break in nested loops '''
