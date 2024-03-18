@@ -28,11 +28,11 @@ while True:
    user_input = input("Please enter your username: ")
    user_input = user_input.strip()
    print(user_input)
-   break
+   continue
    for u in user_input:
           if u in taken_usernames:
             print(error_messages[0])
-            break
+            continue
           elif u not in taken_usernames and len(u) >= 8:
             print("The length is greater than 8")
         

@@ -36,11 +36,13 @@ while True:
         print(f"Test Failed: {user_input} does not contain a number")
         continue
 
-
-    print("lets test for contain one number")
-  
     # Contains at least 1 capital letter
-
+    any_uppercase = any(u.isupper() for u in user_input)
+    if any_uppercase:
+        print(f'Test Passed: {user_input} contains a capitol letter')
+    else:
+        print(f'Test Failed: {user_input} has no caps')
+        continue
     # Contains '@' symbol
     
     # Contains no spaces
