@@ -93,8 +93,6 @@ any_uppercase = any(u.isupper() for u in test_string)
 # uppercase_test_regex = bool(re.match(r'\w*[A-Z]\w*'))
 # print("Contains at least one uppercase letter?", uppercase_test_regex)
 
-
-
 ''' Logging in and handling the loop'''
 
 # These can represent the user id and password the user created
