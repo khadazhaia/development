@@ -18,6 +18,8 @@ Sd@sdjs df0 - at least 10 characters, contains number, has caps, @ symbol, conta
 Sd@sdjsdf0 - should pass all tests
 '''
 
+user_input, re_prompt_user = '','' #initialization
+
 while True:
     user_input = input("Please enter your string ")
 
@@ -29,7 +31,7 @@ while True:
         continue
 
     # Contain at least 1 number
-    contains_num = re.search(r'\d', user_input) #will look for a digit in the string
+    contains_num = re.search(r'\d', user_input) # will look for a digit in the string
     if contains_num:
         print(f'Test Passed: {user_input} contains a number')
     else:
@@ -43,11 +45,31 @@ while True:
     else:
         print(f'Test Failed: {user_input} has no caps')
         continue
+
     # Contains '@' symbol
-    
+    if "@" in user_input:
+        print(f"Test Passes: {user_input} contains a '@' symbol")
+    else:
+        print(f"Test Failed': {user_input} contains no '@' symbol")
+        continue
+
     # Contains no spaces
-    
-        
+    has_space = re.search(r'\s', user_input)  # will look for spaces in the string
+    if not has_space:
+        print(f"Test passed: {user_input} contains no spaces")
+        print("Congrats all testing passed")
+    else:
+        print(f"Test Failed: {user_input} contains spaces")
+        continue
+
+    re_prompt_user = input("Congrats on signing up, please login ")
+    if user_input == re_prompt_user:
+        print(f"Login Successful")
+        break
+    else:
+        print("Invalid Username or Password")
+        continue
+ 
 
 
 
