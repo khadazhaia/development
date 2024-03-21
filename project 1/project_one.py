@@ -10,8 +10,8 @@ The username must start with a lowercase letter, and only contain letters, numbe
       
 The passowrd must be at least 8 characters long, contain at least one uppercase letter, contain at least one lowercase letter, contain at least one digit, contain at least one special character, and not have any spaces.\n''')
 
-username = " "
-password = " "
+user_name = " "
+pass_word = " "
 
 taken_usernames = ["admin", "admin123", "superuser", "superuser123"]
 
@@ -43,11 +43,12 @@ while True:
        continue
         
    # may only contain letters, numbers and underscore (this code not working yet)
-   if username is username.isalnum() or username is username.isalpha(): 
-       print(f"{username} is a valid username")   
+   if (username.isalnum() and "_" in username >= 0) or (username.isalpha and "_" in username >= 0):
+            print(f"{username} is a valid username")   
    else:
        print(f"{error_messages[1]}. Username may only contain letters, numbers and underscores")
        continue
+
 
 # if u.upper >= 1
 # if u.lower >= 1
