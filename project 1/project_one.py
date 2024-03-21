@@ -39,15 +39,19 @@ while True:
    if starts_lower_case:
        print(f"{username} starts with a lowercase letter")
    else:
-       print(error_messages[1])
+       print(f"{error_messages[1]}. Username must start with a lowercase letter")
        continue
         
-   # may only contain letters, numbers and underscore
-   if username == username.isalphanumeric:    
+   # may only contain letters, numbers and underscore (this code not working yet)
+   if username is username.isalnum() or username is username.isalpha(): 
+       print(f"{username} is a valid username")   
+   else:
+       print(f"{error_messages[1]}. Username may only contain letters, numbers and underscores")
+       continue
 
 # if u.upper >= 1
 # if u.lower >= 1
 # if u.digit >= 1
 # if u.count(_) >= 1
-
+              
 # Login Successful! (Handling successful login)
