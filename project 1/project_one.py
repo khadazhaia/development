@@ -14,7 +14,7 @@ username, password = " ", " "
 
 reprompt_username, reprompt_password = " ", " "
 
-taken_usernames = ["admin", "admin123", "superuser", "superuser123"]
+taken_username = ["admin", "admin123", "superuser", "superuser123"]
 
 error_message = ["Username Taken", "Invalid Username", "Invalid Password"]
 
@@ -29,7 +29,7 @@ while True:
    password = input("Please enter your password: ")
    password = password.strip()
   
-   if username not in taken_usernames:
+   if username not in taken_username:
        pass
    else:
        print(error_message[0])
@@ -37,12 +37,17 @@ while True:
    
 # Incorrect username or password  
    # Testing Username: starts with a lowercase letter and only contain letters, numbers and underscore 
-   if   username[0].islower() and username.isidentifier():
+   if username[0].islower() and username.isidentifier():
            print(f"Username: {username}")
    else:
        print(f"{error_message[1]}. Username must start with a lowercase letter and only contain letters, numbers and underscores")
        continue
 
    # Testing password: at least 8 characters long, contain at least one uppercase letter, contain at least one lowercase letter, contain at least one digit, contain at least one special character, and not have any spaces
+   if len(password) >= 8:
+        print(f"{password} is at least 8 characters long")
+   else:
+        print("password must at least 8 letters long")
 
-# Login Successful! (Handling successful login)
+# Login Successful! 
+   # Handling Successful Login, Reprompt user
