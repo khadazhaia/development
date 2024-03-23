@@ -47,7 +47,24 @@ while True:
    if len(password) >= 8:
         print(f"{password} is at least 8 characters long")
    else:
-        print("password must at least 8 letters long")
+        print(f"{error_message[2]} password must be at least 8 letters long")
+        continue
+   
+   if  any(p.isupper() for p in password):
+        print(f"{password} contain at least one uppercase letter")
+   else:
+        print(f"{error_message[2]} password must contain at least one uppercase letter")
+        continue
+    
+   if any(p.islower() for p in password):
+        print(f"{password} contain at least one lowercase letter")
+   else:
+        print(f"{error_message[2]} must contain at least one lowercase letter")
+        continue
+   
+#    if re.search(r'\d', password):
+        
+#    if " " not in password[0:]:
 
 # Login Successful! 
-   # Handling Successful Login, Reprompt user
+   # Handling Successful Login: Reprompt user
