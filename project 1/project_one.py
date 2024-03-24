@@ -8,7 +8,7 @@ print('''To sign up, enter a username and password.
       
 The username must start with a lowercase letter, and only contain letters, numbers, and underscores.
       
-The passowrd must be at least 8 characters long, contain at least one uppercase letter, contain at least one lowercase letter, contain at least one digit, contain at least one special character(!, @, #, $, %, ^, &, *), and not have any spaces.\n''')
+The passowrd must be at least 8 characters long, contain at least one uppercase letter, contain at least one lowercase letter, contain at least one digit, contain at least one special character(!,?,@,#,$,^,&,*,_,-), and not have any spaces.\n''')
 
 username, password = " ", " "
 
@@ -16,9 +16,9 @@ reprompt_username, reprompt_password = " ", " "
 
 taken_username = ["admin", "admin123", "superuser", "superuser123"]
 
-error_message = ["Username Taken.", "Invalid Username.", "Invalid Password.", "Invalid Username or Password."]
+error_message = ["Username Taken.", "Invalid Username.", "Invalid Password.", "Incorrect Username or Password."]
 
-special_character = ["!", "@", "#", "$", "%", "^", "&", "*"]
+special_character = ["!", "?", "@", "#", "$", "^", "&", "*", "_", "-"]
 
 # Get username and password from user. Compare user entries with system username and password. Do they match? 
    # Initialize loop to prompt user, Not a taken username, Give error messages
@@ -54,12 +54,11 @@ while True:
        print(error_message[2],"\n")
        continue
         
-
 # Login Successful! 
    # Handling Successful Login: Reprompt user
+
+print("Please log in, using your username and password.\n")
 while True:
-   print("Please login using your username and password\n")
-   
    reprompt_username = input("Username: ")
    reprompt_username = reprompt_username.strip()
    
