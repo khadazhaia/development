@@ -16,7 +16,7 @@ reprompt_username, reprompt_password = " ", " "
 
 taken_username = ["admin", "admin123", "superuser", "superuser123"]
 
-error_message = ["Username Taken", "Invalid Username", "Invalid Password"]
+error_message = ["Username Taken", "Invalid Username", "Invalid Password", "Invalid Username or Password"]
 
 special_character = ["!", "@", "#", "$", "%", "^", "&", "*"]
 
@@ -62,9 +62,29 @@ while True:
         print(f"{error_message[2]} must contain at least one lowercase letter")
         continue
    
-#    if re.search(r'\d', password):
+   if re.search(r'\d', password):
+        print(f"{password} contain at least one digit")
+   else:
+        print(f"{error_message[2]} must contain at least one digit")
+        continue
         
 #    if " " not in password[0:]:
 
 # Login Successful! 
    # Handling Successful Login: Reprompt user
+#    print("Congrats on signing up, please login ")
+#    
+#    re_prompt_username = input("Please enter your username: ")
+#    re_prompt_username = re_prompt_username.strip()
+#    
+#    re_prompt_password = input("Please enter your password: ")
+#    re_prompt_password = re_prompt_password.strip()
+#    
+#     if username == re_prompt_username and password == re_prompt_password:
+#         print(f"Login Successful")
+#         break
+#     else:
+#         print(error_message[3])
+#         continue
+ 
+
