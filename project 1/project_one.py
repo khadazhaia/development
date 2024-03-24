@@ -67,6 +67,11 @@ while True:
    else:
         print(f"{error_message[2]} must contain at least one digit")
         continue
+   if [p for p in password if p in special_character]:
+        print(f"{password} contain at least one special charcater")
+   else:
+        print(f"{error_message[2]} must contain at least one special character")
+        
         
 #    if " " not in password[0:]:
 
