@@ -16,12 +16,13 @@ reprompt_username, reprompt_password = " ", " "
 
 taken_username = ["admin", "admin123", "superuser", "superuser123"]
 
-error_message = ["Username Taken", "Invalid Username", "Invalid Password", "Invalid Username or Password"]
+error_message = ["Username Taken.", "Invalid Username.", "Invalid Password.", "Invalid Username or Password."]
 
 special_character = ["!", "@", "#", "$", "%", "^", "&", "*"]
 
 # Get username and password from user. Compare user entries with system username and password. Do they match? 
    # Initialize loop to prompt user, Not a taken username, Give error messages
+
 while True:
    username = input("Username: ")
    username = username.strip()
@@ -37,6 +38,7 @@ while True:
    
 # Incorrect username or password  
    # Testing Username: starts with a lowercase letter and only contain letters, numbers and underscore 
+
    if username[0].islower() and username.isidentifier():
        pass
    else:
@@ -44,29 +46,31 @@ while True:
        continue
 
    # Testing password: at least 8 characters long, contain at least one uppercase letter, contain at least one lowercase letter, contain at least one digit, contain at least one special character, and not have any spaces
+
    if (len(password) >= 8) and (any(p.isupper() for p in password)) and (any(p.islower() for p in password)) and (re.search(r'\d', password)) and ([p for p in password if p in special_character]) and (not re.search(r'\s', password)):
-       pass    
+       print("Sign up Successful.\n")
+       break
    else:
        print(error_message[2],"\n")
        continue
         
 
-
-# # Login Successful! 
-#    # Handling Successful Login: Reprompt user
-#    print("Congrats on signing up, please login ")
+# Login Successful! 
+   # Handling Successful Login: Reprompt user
+while True:
+   print("Please login using your username and password\n")
    
-#    re_prompt_username = input("Please enter your username: ")
-#    re_prompt_username = re_prompt_username.strip()
+   reprompt_username = input("Username: ")
+   reprompt_username = reprompt_username.strip()
    
-#    re_prompt_password = input("Please enter your password: ")
-#    re_prompt_password = re_prompt_password.strip()
+   reprompt_password = input("Password: ")
+   reprompt_password = reprompt_password.strip()
    
-#    if username == re_prompt_username and password == re_prompt_password:
-#         print(f"Login Successful")
-#         break
-#    else:
-#         print(error_message[3])
-#         continue
+   if (username == reprompt_username) and (password == reprompt_password):
+        print(f"Login Successful.")
+        break
+   else:
+        print(error_message[3],"\n")
+        continue
  
 
