@@ -3,10 +3,15 @@ import random
 '''Create a new list that contains any students without the letter a, do one version with a for loop, do another one with list comprehension'''
 
 # For Loop
-# students = ['Anna', 'Dana', 'Sarah', 'Farley', 'Oleg', 'Gionni', 'Brenetta']
+students = ['Anna', 'Dana', 'Sarah', 'Farley', 'Oleg', 'Gionni', 'Brenetta']
+# for s in students:
+#     if "a" not in s:
+#         print(s)
 
 # List Comprehension - new_list = [x for x in original_list if condition]
-# students = ['Anna', 'Dana', 'Sarah', 'Farley', 'Oleg', 'Gionni', 'Brenetta']
+students = ['Anna', 'Dana', 'Sarah', 'Farley', 'Oleg', 'Gionni', 'Brenetta']
+new_students = [s for s in students if "a" not in s]
+# print(new_students)
 
 
 ''' Create a list with 1 added to each item in the list, do one version with a for loop, do one with list comprehension'''
@@ -29,6 +34,12 @@ new_list = [new_list.append(o + 1) for o in original_list]
 
 ''' Ranges '''
 
+# for o in range(len(original_list) + 1):
+#     if o == 0:
+#         continue
+#     new_list.append(o + 1)
+#     new_list.remove(None)
+# print(new_list)
 
 
 '''
@@ -147,6 +158,15 @@ Example 5
 
 '''  Write a Python program to calculate sum of digits of a number. '''
 
+# user_input = input('Enter a number: ')
+
+# sum = 0
+
+# for u in user_input:
+#     sum += int(u)
+
+# print(sum)
+
 
 
 
@@ -173,7 +193,15 @@ num = 5
 
 list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 '''
+num = 5
 
+list = [6, 7, 8, 9, 10]
+
+
+# if all(l > num for l in list):
+#         print(True)
+# else:
+#     print(False)
 
 
 
@@ -183,20 +211,43 @@ word = 'supercalifragilisticexpialidocious'
 '''
 # string method
 
+char = 'i'
+word = 'supercalifragilisticexpialidocious'
+
+# spec_char = word.count(char)
+# print(spec_char)
 
 # for loop
+
+# count = 0
+
+# for w in word:
+#     if w == char:
+#        count += w.count(char)
+# print(count)
+
 
 
 ''' Create a program that asks the user to enter their name and their age. Print out a message addressed to them that tells them the year that they will turn 100 years old.'''
 
+# user_name = input('Enter your name: ')
+# user_age = int(input('Enter your age: '))
 
-
+# hundred = 100 - user_age
+# print(f"{user_name} will turn 100 in {hundred} years")
 
 '''
 Given two integer numbers, return their product only if the product is equal to or lower than 1000. Otherwise, return their sum.
 
 '''
 
+# first = int(input("Enter your 1st number: "))
+# second = int(input("Enter your 2nd number: "))
+
+# if (first * second) <= 1000:
+#     print(first * second)
+# else:
+#     print(first + second)
 
 
 
@@ -330,14 +381,14 @@ my_super_list = [
 
 # print(number_to_guess)
 
-while True:
-    number_to_guess = random.randrange(0,10)
-    user_input = int(input("Please enter a number: "))
-    if user_input == number_to_guess:
-        print("Good Job, You guess the correct number")
-        break
-    else:
-        print("Number Incorrect. Guess again")
-        continue
+# while True:
+#     number_to_guess = random.randrange(0,10)
+#     user_input = int(input("Please enter a number: "))
+#     if user_input == number_to_guess:
+#         print("Good Job, You guess the correct number")
+#         break
+#     else:
+#         print("Number Incorrect. Guess again")
+#         continue
 
 # print()
