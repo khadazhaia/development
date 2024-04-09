@@ -264,8 +264,8 @@ discounts = [] # to show who gets our discounts from our looping
 over_60_years = {'Dominic', 'Linda', 'Simone', 'Swathi', 'Olaf'}
 over_5_purchases = {'Finn', 'Simone', 'Aaron', 'Dominic'}
 
-result = over_60_years.intersection(over_5_purchases)
-print(result)
+# result = over_60_years.intersection(over_5_purchases)
+# print(result)
 
 '''
 Exercise - Sets
@@ -279,32 +279,54 @@ The set of employees that know Python or JavaScript, but not both
 '''
 
 # instructions
-print("instructions")
+print('''\nPython and JS Developer Tracker
+Instructions
+Input 's' or 'stop' at anytime to exit program
+To add a Python developer type 'p' when prompted.
+To add a JavaScript developer type 'js' when prompted.\n''')
 
 # intialize our variables
-
+developer_tracker, developer_name = "", ""
 python_and_javascript = set()
 python_only = set()
 javascript_only = set()
 
 # put our error messages in a tuple
-
 error_messages = ("Have a nice day", "")
 
 # while loops
-
 while True:
 
 # inputs
-    user_input = input("Please enter the coding languages you know: ")
+    developer_tracker = input("Type 'P' for Python developer, 'JS' for JavaScript developer, or 'STOP' to exit program: ")
+    developer_name = input("Enter developer name: ")
 
 # string methods for cleanup if needed .strip(), .title()
-
-#  if statements, break keyword, continue, pass
-
-# sets
+    developer_tracker = developer_tracker.strip().title()
+    developer_name = developer_name.strip().title()
+    print("RESULTS\n")
+   
+#  if statements, break keyword, continue # sets
+    if developer_tracker == "P":
+       python_only.add(developer_name)
+       continue
+    elif developer_tracker == "JS":
+       javascript_only.add(developer_name)
+       continue
+    elif developer_tracker == "P" and developer_tracker == "JS":
+       python_and_javascript.add(developer_name)
+       continue
+    elif developer_tracker == "STOP":
+       print(error_messages[0])
+       break 
 
 # print statement, formatted strings
+    print(f"The following developers know both languages: {python_and_javascript}")
+    print(f"The following developers know JavaScript but not PYTHON: {javascript_only}")
+    print(f"The following developers know PYTHON but not JavaScript: {python_only}")
+    continue
+
+
 
 
 
