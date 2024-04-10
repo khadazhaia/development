@@ -285,7 +285,26 @@ Input 's' or 'stop' at anytime to exit program
 To add a Python developer type 'p' when prompted.
 To add a JavaScript developer type 'js' when prompted.\n''')
 
-# # intialize our variables
+# Intialize our variables
+
+# Data Collection Sets
+python_devs, js_devs = set(), set()
+
+# User input 
+dev_type_input, dev_name_input = "", ""
+
+# Error messages
+error_msgs = ("Invalid Input, please try again", "Thank you, have a nice day")
+
+# While Loop
+while True:
+     dev_type_input = input("Type 'P' for PYTHON Developer or 'JS' for JavaScript developer, or 'STOP' to exit program: ").lower()
+     
+     # This gives the user an exit
+     if dev_type_input == "stop":
+          print(error_msgs[1])
+          break
+
 # developer_tracker, developer_name = "", ""
 # both_languages = set()
 # javascript_only = set()
