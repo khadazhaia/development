@@ -287,12 +287,14 @@ To add a JavaScript developer type 'js' when prompted.\n''')
 
 # intialize our variables
 developer_tracker, developer_name = "", ""
-python_and_javascript = set()
-python_only = set()
+both_languages = set()
 javascript_only = set()
+python_only = set()
+either_languages = set()
+
 
 # put our error messages in a tuple
-error_messages = ("Have a nice day", "")
+error_messages = ("Have a nice day", "no data", "")
 
 # while loops
 while True:
@@ -302,34 +304,40 @@ while True:
     developer_name = input("Enter developer name: ")
 
 # string methods for cleanup if needed .strip(), .title()
-    developer_tracker = developer_tracker.strip().title()
+    developer_tracker = developer_tracker.strip().upper()    
     developer_name = developer_name.strip().title()
-    print("RESULTS\n")
+    print("RESULTS:\n")
    
-#  if statements, break keyword, continue # sets
+#  if statements, break keyword, continue # sets   
+    if developer_tracker == "JS":
+       javascript_only.add(developer_name)
     if developer_tracker == "P":
        python_only.add(developer_name)
-       continue
-    elif developer_tracker == "JS":
-       javascript_only.add(developer_name)
-       continue
-    elif developer_tracker == "P" and developer_tracker == "JS":
-       python_and_javascript.add(developer_name)
-       continue
-    elif developer_tracker == "STOP":
-       print(error_messages[0])
-       break 
+    if developer_tracker == "P" or developer_tracker == "JS":
+       either_languages = javascript_only.union(python_only)
+    if developer_name in javascript_only and developer_name in python_only:
+        both_languages = javascript_only.intersection(python_only)
 
 # print statement, formatted strings
-    print(f"The following developers know both languages: {python_and_javascript}")
+    print(f"The following developers know both languages: {both_languages}")
     print(f"The following developers know JavaScript but not PYTHON: {javascript_only}")
-    print(f"The following developers know PYTHON but not JavaScript: {python_only}")
-    continue
+    print(f"The set of employees that know Python or JavaScript, but not both: {either_languages}")
+    
+    if developer_tracker == "STOP":
+        break
+print(error_messages[0])
 
 
 
 
-
+    # if both_languages == set(): 
+    #    both_languages = error_messages[1]
+    # if javascript_only == set():
+    #    javascript_only = error_messages[1]
+    # if python_only == set():
+    #    python_only = error_messages[1]
+    # if either_languages == set():
+    #    either_languages = error_messages[1]
 
 
 
