@@ -298,78 +298,27 @@ error_msgs = ("Invalid Input, please try again", "Thank you, have a nice day")
 
 # While Loop
 while True:
+     
+     #inputs
      dev_type_input = input("Type 'P' for PYTHON Developer or 'JS' for JavaScript developer, or 'STOP' to exit program: ").lower()
      
+     # if statements, break keyword, continue
      # This gives the user an exit
      if dev_type_input == "stop":
           print(error_msgs[1])
           break
+     
+     # Get a dev type, add to our sets, and offer an exit
+     if dev_type_input == 'p' or dev_type_input == 'js':
+        dev_name_input = input("Enter developer name: ").lower()
 
-# developer_tracker, developer_name = "", ""
-# both_languages = set()
-# javascript_only = set()
-# python_only = set()
-# either_languages = set()
-
-
-# # put our error messages in a tuple
-# error_messages = ("Thank you, have a nice day", "no data")
-
-# # while loops
-# while True:
-
-# # inputs
-#     developer_tracker = input("Type 'P' for Python developer, 'JS' for JavaScript developer, or 'STOP' to exit program: ")
-
-# # string methods for cleanup if needed .strip(), .upper()
-#     developer_tracker = developer_tracker.strip().upper()    
-
-# # if statements, break keyword, pass 
-#     if developer_tracker != "STOP": 
-#          pass
-#     else:
-#          break
-
-# #inputs  
-#     developer_name = input("Enter developer name: ")
-
-# # string methods for cleanup if needed .strip(), .title()
-#     developer_name = developer_name.strip().title()
-
-# # if statements, break keyword, pass 
-#     if  developer_name != "Stop":
-#         pass
-#     else:
-#         break
-  
-# # if statements
-    
-#     if developer_tracker == "JS":
-#        javascript_only.add(developer_name)
-#     if developer_tracker == "P":
-#        python_only.add(developer_name)
-
-# # sets
-#     both_languages = javascript_only.intersection(python_only)
-#     either_languages = javascript_only.symmetric_difference(python_only)
-#     javascript_only = javascript_only.difference(python_only)
-
-# # print statement, formatted strings
-#     print("RESULTS:\n")
-#     print(f"The following developers know both languages: {both_languages}")
-#     print(f"The following developers know JavaScript but not PYTHON: {javascript_only}")
-#     print(f"The set of employees that know Python or JavaScript, but not both: {either_languages}")
-    
-# print(error_messages[0])
-
-
-
-
-
-
-
-
-
-
-
-
+        if dev_name_input == "stop":
+            print(error_msgs[1])
+            break
+        elif dev_type_input == 'p':
+            python_devs.add(dev_name_input.title())
+        else:
+            js_devs.add(dev_name_input.title())
+     else:
+        print(error_msgs[0])
+        continue
