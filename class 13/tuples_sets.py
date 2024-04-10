@@ -294,50 +294,57 @@ either_languages = set()
 
 
 # put our error messages in a tuple
-error_messages = ("Have a nice day", "no data", "")
+error_messages = ("Thank you, have a nice day", "no data")
 
 # while loops
 while True:
 
 # inputs
     developer_tracker = input("Type 'P' for Python developer, 'JS' for JavaScript developer, or 'STOP' to exit program: ")
+
+# string methods for cleanup if needed .strip(), .upper()
+    developer_tracker = developer_tracker.strip().upper()    
+
+# if statements, break keyword, pass 
+    if developer_tracker != "STOP": 
+         pass
+    else:
+         break
+
+#inputs  
     developer_name = input("Enter developer name: ")
 
 # string methods for cleanup if needed .strip(), .title()
-    developer_tracker = developer_tracker.strip().upper()    
     developer_name = developer_name.strip().title()
-    print("RESULTS:\n")
-   
-#  if statements, break keyword, continue # sets   
+
+# if statements, break keyword, pass 
+    if  developer_name != "Stop":
+        pass
+    else:
+        break
+  
+# if statements
+    
     if developer_tracker == "JS":
        javascript_only.add(developer_name)
     if developer_tracker == "P":
        python_only.add(developer_name)
-    if developer_tracker == "P" or developer_tracker == "JS":
-       either_languages = javascript_only.union(python_only)
-    if developer_name in javascript_only and developer_name in python_only:
-        both_languages = javascript_only.intersection(python_only)
+
+# sets
+    # javascript_only = javascript_only.difference(python_only)
+    both_languages = javascript_only.intersection(python_only)
+    either_languages = javascript_only.symmetric_difference(python_only)
+    javascript_only = javascript_only.difference(python_only)
 
 # print statement, formatted strings
+    print("RESULTS:\n")
     print(f"The following developers know both languages: {both_languages}")
     print(f"The following developers know JavaScript but not PYTHON: {javascript_only}")
     print(f"The set of employees that know Python or JavaScript, but not both: {either_languages}")
     
-    if developer_tracker == "STOP":
-        break
 print(error_messages[0])
 
 
-
-
-    # if both_languages == set(): 
-    #    both_languages = error_messages[1]
-    # if javascript_only == set():
-    #    javascript_only = error_messages[1]
-    # if python_only == set():
-    #    python_only = error_messages[1]
-    # if either_languages == set():
-    #    either_languages = error_messages[1]
 
 
 
