@@ -10,3 +10,15 @@ my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 8. Take input from the user and using an if statement, let the user know if the value they entered is a letter or a number
 9. Take a word from the user and let them know how many vowels are in the word
 10. Remove the duplicates from a list with values [4, 4, 4, 3, 2, 1, 4, 9]"""
+
+# 9. Take a word from the user and let them know how many vowels are in the word
+word = ""
+vowel = "aeiou"
+
+user_input = input("Enter a word: ")
+
+for u in user_input:
+    if u in vowel:
+      word += u
+print(len(word))
+
