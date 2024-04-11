@@ -18,11 +18,8 @@ To add a JavaScript developer type 'js' when prompted.\n''')
 
 # intialize our variables
 developer_tracker, developer_name = "", ""
-both_languages = set()
 javascript_only = set()
 python_only = set()
-either_languages = set()
-
 
 # put our error messages in a tuple
 error_messages = ("Thank you, have a nice day", "no data")
@@ -63,13 +60,23 @@ while True:
 
 # sets
     both_languages = javascript_only.intersection(python_only)
+    javascript_not_python = javascript_only.difference(python_only)
     either_languages = javascript_only.symmetric_difference(python_only)
-    javascript_only = javascript_only.difference(python_only)
+    
+ # if sets are empty, display no data for user
+    if both_languages == set():
+         both_languages = "No Data"
+
+    if javascript_not_python == set():
+         javascript_not_python = "No Data"
+
+    if either_languages == set():
+         either_languages = "No Data"
 
 # print statement, formatted strings
     print("RESULTS:\n")
     print(f"The following developers know both languages: {both_languages}")
-    print(f"The following developers know JavaScript but not PYTHON: {javascript_only}")
+    print(f"The following developers know JavaScript but not PYTHON: {javascript_not_python}")
     print(f"The set of employees that know Python or JavaScript, but not both: {either_languages}")
     
 print(error_messages[0])

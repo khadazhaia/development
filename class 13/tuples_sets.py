@@ -322,3 +322,28 @@ while True:
      else:
         print(error_msgs[0])
         continue
+     
+     # Set Operations
+     both_languages = python_devs.intersection(js_devs) # Everybody who knows both
+     know_js_not_python = js_devs.difference(python_devs) # know js not python - difference
+     know_python_or_js_but_not_both = js_devs.symmetric_difference(python_devs)
+     
+     # if sets are empty, display no data for user
+     if both_languages == set():
+         both_languages = "No Data"
+
+     if know_js_not_python == set():
+         know_js_not_python = "No Data"
+
+     if know_python_or_js_but_not_both == set():
+         know_python_or_js_but_not_both = "No Data"
+
+
+     print("RESULTS:\n")
+     print("- - - - - - - - - - - - - - - - - - - - - - -")
+     print(f"The following developers know both languages: {both_languages}")
+     print(f"The following developers know JavaScript but not PYTHON: {know_js_not_python}")
+     print(f"The set of employees that know Python or JavaScript, but not both: {know_python_or_js_but_not_both}")
+     print("- - - - - - - - - - - - - - - - - - - - - - -")
+    
+
