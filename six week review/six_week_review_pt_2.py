@@ -254,7 +254,13 @@ Given two integer numbers, return their product only if the product is equal to 
 '''
 Write a program to accept a string from the user and display characters that are present at an even index number.
 '''
+str_input = input("Enter a word: ")
+display_char = " "
 
+for s in str_input[::2]: #[::2] allows to skip by 2
+    display_char += s
+
+# print(display_char)
 
 
 '''
@@ -277,18 +283,25 @@ Print the following pattern
 ''' 
 Positive, Negative, or Zero: Write a Python program that takes a number as input and prints whether it is positive, negative, or zero.
 '''
+# num_input = int(input("Enter a number: "))
 
+# if num_input > 0:
+#     print("Positive")
+# elif num_input < 0:
+#     print("Negative")
+# else:
+#     print("Zero")
 
 
 '''
 Largest of Three Numbers: Write a Python program that takes three numbers as input and prints the largest among them.
 '''
-
+# first method
 # max_list = [int(input("Please enter a number: ")), int(input("Please enter a number: ")), int(input("Please enter a number: "))]
 # print(f"The biggest number in the list is {max(max_list)}")
 
 
-
+# second method
 # first = int(input("Please enter a number: "))
 # second = int(input("Please enter a number: "))
 # third = int(input("Please enter a number: "))
@@ -303,6 +316,12 @@ Largest of Three Numbers: Write a Python program that takes three numbers as inp
 # print(result)
 
 '''Count Digits in a Number: Write a Python program using a while loop to count the number of digits in a given integer N taken from a user.'''
+
+num_input = int(input("Please enter a number: "))
+count = 0
+
+while num_input.isnumerical():
+     
 
 
 '''
