@@ -1,5 +1,5 @@
 from statistics import mode 
-from statistics import mean
+import pandas as pd
 
 ''' Fun facts about dictionaries 
 
@@ -247,21 +247,41 @@ records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},\
            {'name': 'Alice', 'title': 'consultant', 'salary': 25000},\
            {'name': 'David', 'title': 'consultant', 'salary': 40000}]
 
-salary = 0
+# Our output dictionaries
+title_salary_dict = {} # capture our titles and salary totals
 
+title_count_dict = {} # This will capture title count
+
+# loop through our dictionary
 for r in records:
-        for k,v in r.items():
-            if v.isalpha():
-              salary += v
-              print(salary)
+    #define key and value pair for output
+    title = r["title"]
+    salary = r["salary"]
+    # if the job title does not currently exist, we will add the title and the salary
+    if title not in title_salary_dict:
+        title_salary_dict[title] = salary
+        title_count_dict[title] = 1
+    else:
+        # otherwise, we will update the salary, and update the count of titles
+         title_salary_dict[title] += salary
+         title_count_dict[title] += 1
+
+# Lets take a look at our output
+print("All title and sum of salaries", title_salary_dict)
+print("Titles, and the count of employees", title_count_dict)
+
+result = {s:float(title_salary_dict[s]/title_count_dict[s])for s in title_salary_dict}
+print(result)
+
+# Pandas solution
+df = pd.DataFrame.from_records(records)
+result = df.groupby("title")["salary"].mean()
+print(result)
         
         
 
 
 
-#          salary += r
-
-# print(salary)
          
 
 
