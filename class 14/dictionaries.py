@@ -1,4 +1,5 @@
-from statistics import mode
+from statistics import mode 
+from statistics import mean
 
 ''' Fun facts about dictionaries 
 
@@ -245,6 +246,25 @@ records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},\
            {'name': 'David', 'title': 'developer', 'salary': 65000},
            {'name': 'Alice', 'title': 'consultant', 'salary': 25000},\
            {'name': 'David', 'title': 'consultant', 'salary': 40000}]
+
+salary = 0
+
+for r in records:
+        for k,v in r.items():
+            if v.isalpha():
+              salary += v
+              print(salary)
+        
+        
+
+
+
+#          salary += r
+
+# print(salary)
+         
+
+
 
 
 
