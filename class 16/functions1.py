@@ -158,29 +158,29 @@ transactions = [{'id': 'a', 'amount': 500, 'type': 'deposit'},\
                 {'id': 'e', 'amount': 150, 'type': 'deposit'}]
 
 
-def trannsaction_logs(transaction_data):
-    output = {}
+# def trannsaction_logs(transaction_data):
+#     output = {}
 
-    for t in transaction_data:
-        # if ID doesnt yet exist, wee add it to our output dictionaryh
-        if t['id'] not in output.keys():
-            if t['type'] == "deposit": # checking for deposits
-                output[t['id']] = t['amount'] # add deposits amount to ID Key
-        else:
-            # Otherwise, it exists, lets check to see if its a withdral or deposit
-            if t['type'] == 'withdrawal': # checking deposit
-                output[t['id']] -= t['amount']
-            else:
-                output[t['id']] += t['amount']
-    return output
+#     for t in transaction_data:
+#         # if ID doesnt yet exist, wee add it to our output dictionaryh
+#         if t['id'] not in output.keys():
+#             if t['type'] == "deposit": # checking for deposits
+#                 output[t['id']] = t['amount'] # add deposits amount to ID Key
+#         else:
+#             # Otherwise, it exists, lets check to see if its a withdral or deposit
+#             if t['type'] == 'withdrawal': # checking deposit
+#                 output[t['id']] -= t['amount']
+#             else:
+#                 output[t['id']] += t['amount']
+#     return output
 
-print(trannsaction_logs(transactions)) # our function call, with our list of dictionaries
+# print(trannsaction_logs(transactions)) # our function call, with our list of dictionaries
 
 
 
 ''' Create a python file called name_module.py. Inside this python file, you will create 3 functions. One called full_name, another called reverse_name, and a third called get_initials. Each function will take 2 strings. One string will be the first name, the second string will be the last name. full_name will concatenate and return the full name. For example if the first string is "Joseph" and the second string is "Simpson" This function will return the string, "Joseph Simpson". Reverse name will flip the name around. The name Diana Prince, would come back as Prince Diana. The third function will take the first and last name and return the initials. The name Tony Stark will return T.S. Now create a second python file, called name.py. Import the module you just created and call the function with the necessary arguments so it prints a full names, reverse names, and initials as needed in the terminal'''
 
 
-# print(name_module.get_initials("Abraham", "Linclon"))
-# print(name_module.full_name("Abraham", "Linclon"))
-# print(name_module.reverse_name("Abraham", "Linclon"))
+print(name_module.get_initials("Abraham", "Linclon"))
+print(name_module.full_name("Abraham", "Linclon"))
+print(name_module.reverse_name("Abraham", "Linclon"))
