@@ -96,30 +96,46 @@ Mean: 3.4
 Median: 4
 Mode: 5
 '''
-def get_stats(new_list):
-    mean = statistics.mean(new_list)
-    median = statistics.median(new_list)
-    mode = statistics.mode(new_list)
-    return mean, median, mode
 
-my_list = [1,2,4,5,5]
+# my solution - (didn't format the return)
 
-print(get_stats(my_list))
+# def get_stats(new_list):
+#     mean = statistics.mean(new_list)
+#     median = statistics.median(new_list)
+#     mode = statistics.mode(new_list)
+#     return mean, median, mode
 
+# my_list = [1,2,4,5,5]
+
+# print(get_stats(my_list))
+
+
+# class solution
+ 
+# def get_stats(my_list:list)-> str: #type hinting shows that the parameter is a list and that the function should be retuning a string
+#     my_mean = statistics.mean(my_list)
+#     my_median = statistics.median(my_list)
+#     my_mode = statistics.mode(my_list)
+#     return f"Mean: {my_mean}\nMedian: {my_median}\nMode: {my_mode}" # you can returned a formatted string
+
+
+# my_list = [1,2,4,5,5]
+
+# print(get_stats(my_list)) # this is a function call, or invocation
 
 '''Global variables'''
 
 # x = 'challenging'
 # def change_x():
-#     x = 'fun'
+#     x = 'fun' # x wont change to fun as its already define out of the function
 
-# change_x()
+# change_x() # function call
 # print("Programming is", x)
 
 
 # x = 'challenging'
 # def change_x():
-#     global x
+#     global x # global overrides and takes the x from inside the function
 #     x = 'fun'
     
 # change_x()
