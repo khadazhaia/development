@@ -118,25 +118,34 @@ Sometimes the age might not be in the correct format. Handle this using try-exce
 If the age is greater than or equal to 65, the customer is eligible for the discount. Otherwise, they're not eligible. Print whether the customer is eligible or not.
 
 '''
-user_age = int(input("Please enter your age: "))
-
-# try:
-#     if user_age >= 65:
-#          print("Customer is eligble")
-#     else:
-#          print("Customer is not eligible")       
-# except ValueError:
-#     print("Number must be a whole number only please")
-
 
 # With Except
-
+# try:
+#     customer_age = int(input("Please enter your age: "))   
+#     print('Eligible for discount') if customer_age >= 65 else ("customer is not eligible for discount.")    
+# except ValueError:
+#     print("Age must be an integer value")
 
 
 # With Except / Else
+# try:
+#     customer_age = int(input("Please enter your age: "))       
+# except ValueError:
+#     print("Age must be an integer value")
+# else:
+#     print('Eligible for discount') if customer_age >= 65 else ("customer is not eligible for discount.")
+
 
 # With Except / Else / Finally
-
+# try:
+#     customer_age = int(input("Please enter your age: "))    
+# only line we need to try  
+# except ValueError:
+#     print("Age must be an integer value")
+# else:
+#     print('Eligible for discount') if customer_age >= 65 else ("customer is not eligible for discount.")
+# finally:
+#     print("I will always run, no matter want, I am usualy use for cleanup")
 
 ''' Exercise 
 
