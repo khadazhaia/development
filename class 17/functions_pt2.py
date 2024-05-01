@@ -147,23 +147,48 @@ Syntax: lambda arguments : expression
 '''
 
 # Function to add two numbers
-
+# def add_two(x, y):
+#     return x + y
+# print(add_two(5,7))
 
 
 # Written as a Lambda
+# add_two = lambda x,y : x + y
+# print(add_two(5,7))
 
+# can print it out this way too
+# print((add_two)(5,8))
 
+# Can print out without a variable
+# print((lambda x,y : x + y)(5, 7))
 
 
 # Write the following functions as Lambdas
 
-def greeting(fname):
-    print(f'Hello, {fname}')
+# def greeting(fname):
+#     print(f'Hello, {fname}')
+
+# greeting = lambda fname : f'Hello, {fname}'
+# print(greeting('zhaia'))
+
+# can print it out this way too
+# print((greeting)("mia"))
+
+# can print out without variable
+# print((lambda fname: f'Hello {fname}')("Khadazhaia"))
 
 
-def double_me(num):
-    return num + num
+# def double_me(num):
+#     return num + num
 
+# double_me = lambda num : num + num
+# print(double_me(12))
+
+# can print it out this way too
+# print((double_me)(10))
+
+# can print out without variable
+# print((lambda num : num + num)(12))
 
 '''
 Exercise
@@ -171,8 +196,16 @@ Write a lambda that computes the n-th power of a number, given two arguments, nu
 Now, write a function that is equivalent to the lambda.
 '''
 
+# power = lambda num, n: num ** n
+# print(power(10,2))
 
+#lambda without the variable
+# print((lambda num, n: num ** n)(10, 2))
 
+# def number(num, n):
+#     return num ** n
+
+# print(number(10, 2))
 
 
 ''' Higher Order Functions
@@ -185,15 +218,36 @@ map - returns a map object(which is an iterator) of the results after applying t
 '''
 # Let's use the filter function to find the even numbers in a list
 
+# def even_function(n):
+#     """Delivers true or false, based on odd or even"""
+#     return n % 2 == 0
 
+# n = 5
+# print(even_function(n))
 
-my_list = [0,1,2,3,4,5,6,7,8,9,10]
+# Apply Filter to find even numbers
+# Syntax: filter(function, iterable)
+# my_list = [0,1,2,3,4,5,6,7,8,9,10]
+
+# even_num_filter = filter(lambda n: n % 2 == 0, my_list)
+# print(list(even_num_filter))
 
 # Triple Me! Triple the numbers in this lsit
+# Syntax: map(function, iterable)
+# triple_me = [0,1,2,3,4,5,6]
 
-triple_me = [0,1,2,3,4,5,6]
+# result = map(lambda n: n * 3, triple_me)
+# print(list(result))
 
 # Lambda with sort
+
+"""Syntax: sorted(iterable, key=key, reverse=reversed)
+
+iterable, required. The sequence to sort, list, dictionary, tuple,etc.
+
+key, optional. A function to execute to decide the order. Default is None
+
+reverse, optional. A Boolean, False will sort ascending, True will sort descending, Default is False"""
 
 students = [{"name":"Kim","grade":98},
             {"name":"Joe","grade":65},
@@ -202,7 +256,11 @@ students = [{"name":"Kim","grade":98},
             {"name":"Torrie","grade":65},
             {"name":"Simon","grade":78}]
 
+# students_by_name = sorted(students, key = lambda s: s["name"], reverse=True)
+# print(students_by_name)
 
+# students_by_grade = sorted(students, key = lambda s: s["grade"])
+# print(students_by_grade)
 
 '''
 Assignment 6
@@ -213,7 +271,14 @@ parameters - assets, liabilities
 Must contain type hinting for the parameters as well as what the function will be returning
 Call the function in a print statement with needed arguments
 '''
+# defining function parameter : type hinting, parameter : typehinting returning a float
+def net_worth(assets : float, liabilties : float) -> float:
+    """Return networth
+    -user's assets           <- this is a doc string
+    -user's liabilities
+    """
+    return assets - liabilties
 
-
+print(net_worth(20000, 10000))
 
 
