@@ -145,7 +145,7 @@ If the age is greater than or equal to 65, the customer is eligible for the disc
 # else:
 #     print('Eligible for discount') if customer_age >= 65 else ("customer is not eligible for discount.")
 # finally:
-#     print("I will always run, no matter want, I am usualy use for cleanup")
+#     print("I will always run, no matter want, I am usually use for cleanup")
 
 ''' Exercise 
 
