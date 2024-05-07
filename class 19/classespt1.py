@@ -141,9 +141,9 @@ dog3 = Dog("Stella", 2016, "Japanese Chin")
 # print(dog3.human_age())
 
 # Dog Years Method
-print(dog1.dog_years())
-print(dog2.dog_years())
-print(dog3.dog_years())
+# print(dog1.dog_years())
+# print(dog2.dog_years())
+# print(dog3.dog_years())
 
 # today = datetime.datetime.now()
 # year = today.year
@@ -153,14 +153,55 @@ print(dog3.dog_years())
 
 
 
-''' Exercise - Date Class '''
+''' Exercise - Date Class 
 
+1. Display the date in a format of mm//dd/yyyy
+2. compare 2 differenr dates, if they are equal
+3. Compare which date came first
+4. Determine if a date is a leap year
+'''
 
+class Date:
 
+     def __init__(self, year=1970, month=1, day=1):
+         """ These are our parameters"""
+         self.year = year
+         self.month = month
+         self.day = day
 
+     # this will control what the print built in function displays
+     def __str__(self):
+         return f"Month: {self.month:02d}\nDay: {self.day:02d}\nYear: {self.year}"
+     
+     # this will control what == does in your class
+     def __eq__(self, other):
+         if self.year == other.year and self.month == other.month and self.day == other.day:
+             return True
+         return False
+     
+     # create a method to handle less than date objects, which date came first
+     def __lt__(self, other):
+         selfdate = datetime.datetime(self.year, self.month, self.day)
+         otherdate = datetime.datetime(other.year, other.month, other.day)
+         if selfdate < otherdate:
+             return True
+         return False
+    
+my_date_info = Date(2004, 10, 4) # create the object
+second_date = Date(2004, 10, 4)
+default_date = Date(2005)
+# print(default_date)
+
+# String Representation
+# print(my_date_info)
+
+# Equality
+# print(my_date_info == second_date)
  
+old_date = Date(1998, 2, 10)
+new_date = Date(2000, 2, 10)
 
-
+print(old_date < new_date)
 
 
 '''
