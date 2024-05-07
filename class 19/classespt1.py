@@ -186,6 +186,11 @@ class Date:
          if selfdate < otherdate:
              return True
          return False
+     
+     def is_leap_year(self):
+         if self.year % 4 == 0 and (self.year % 100 != 0 or self.year % 400 == 0):
+            return True
+         return False
     
 my_date_info = Date(2004, 10, 4) # create the object
 second_date = Date(2004, 10, 4)
@@ -201,8 +206,10 @@ default_date = Date(2005)
 old_date = Date(1998, 2, 10)
 new_date = Date(2000, 2, 10)
 
-print(old_date < new_date)
+# print(old_date < new_date)
 
+my_new_date = Date(2008, 6, 1)
+print(my_new_date.is_leap_year())
 
 '''
 Exercise - Dog Class
