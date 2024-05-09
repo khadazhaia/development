@@ -18,7 +18,7 @@ class Employee:
 
      # __str__(): return a string representation
      def __str__(self):
-         return f"{self.name} is a {self.job_title} in the {self.department} department who was hired in {self.hire_year} and makes {self.salary}"
+         return f"{self.name} is a {self.job_title} in the {self.department} department who was hired in {self.hire_year} and makes {self.salary:.02f}"
     
      # years_worked(): return the total years this employee has worked here, based on the hire year
      def years_worked(self):
@@ -37,7 +37,7 @@ employee2 = Employee("Ally", "Software Engineer", "Engineering", 130000, 2020)
 employee3 = Employee("Nas", "Data Scientist", "Data", 125000, 2023)
 employee4 = Employee("Tye", "Controller", "Finance",100000, 2021)
 employee5 = Employee("Zena", "Executive Assistant", "Operations", 90000, 2022)
-employee6 = Employee("Des","Human Resources Manager", "HR", 85000, 2021)
+employee6 = Employee("Des", "HR Manager", "HR", 85000, 2021)
     
 # testing
 print(employee1)
